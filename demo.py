@@ -165,10 +165,11 @@ def main(driver):
                 st.write(food_list)
                 
 
-                st.subheader("평점 기반 랜덤 후보군 선택 결과")
-                food_list_idx = [i for i in range(len(food_list["point"]))]
-                food_list_probs = list(food_list["point"] / sum(food_list["point"]))
-                selected_idx = np.random.choice(food_list_idx, size=min(len(food_list["point"]), 3), replace=False, p=food_list_probs)
+                st.subheader("조회수 기반 랜덤 후보군 선택 결과")
+                food_list["view"] = [float(item.replace(",", "")) for item in food_list["view"]]
+                food_list_idx = [i for i in range(len(food_list["view"]))]
+                food_list_probs = list(food_list["view"] / sum(food_list["view"]))
+                selected_idx = np.random.choice(food_list_idx, size=min(len(food_list["view"]), 3), replace=False, p=food_list_probs)
                 food_list_idx_bool = [False for _ in range(len(food_list["point"]))]
                 for i in selected_idx:
                     food_list_idx_bool[i] = True
