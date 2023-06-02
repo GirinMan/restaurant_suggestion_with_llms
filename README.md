@@ -2,6 +2,14 @@
 ![image](https://github.com/liner-engineering/liner-pdf-chat-tutorial/assets/44901828/d5026b33-9965-4724-9b45-99bfe88ed5fe)
 자연어로 된 입력을 받아 맛집 추천을 해주는 프로그램입니다.
 
+## 실행 방법
+#### API key 입력
+- 네이버 검색 API Client ID/Secret, OpenAI API key 등을 utils 폴더 내부에 있는 소스 코드 파일에 입력
+#### Command parser model API 서버 실행
+- ```utils/cmd_parser/run_server.sh``` 실행
+#### Streamlit app 실행
+- ```streamlit run demo.py```
+
 ## 프로젝트 소개
 - 대규모 언어 모델을 활용한 에이전트를 기반으로, 사람이 단계적으로 작업을 수행하는 과정을 모방하도록 하는 Langchain과 OpenAI 모델 활용
 - 좋은 식사 장소를 찾기 위한 과정을 정의하고, 이를 AI agent가 수행하도록 개발 
